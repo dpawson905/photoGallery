@@ -1,0 +1,16 @@
+
+<% if(error && error.length > 0){ %>
+  <script>
+    $(function(){
+      M.toast({html: '<%= error %>', classes: 'red'}, 6000)
+    })
+  </script>
+<% } %>
+<% if(success && success.length > 0){ %>
+  <script>
+    $(function() {
+      M.toast({html: '<%= success %>', classes: 'green'}, 6000)
+    })
+  </script>
+<% } %>
+    

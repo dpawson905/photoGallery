@@ -1,0 +1,31 @@
+{
+  "name": "e-photo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "set DEBUG=e-photo:* && nodemon"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.0.6",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-session": "^1.15.6",
+    "font-awesome": "^4.7.0",
+    "http-errors": "~1.6.2",
+    "joi": "^14.3.0",
+    "mongoose": "^5.4.0",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "randomstring": "^1.1.5"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  }
+}

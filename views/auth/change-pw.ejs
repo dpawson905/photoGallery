@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+  <main>
+    <div class="section centered-v">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div class="card green darken-1 z-depth-2">
+              <div class="card-content white-text">
+                <span class="card-title">Change Password</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <form action="/users/change-pw" method="POST" class="col s12">
+            <input id="token" type="hidden" name="token" class="validate" value="<%= token %>">
+            <div class="row">
+              <div class="input-field col m6 s12">
+                <input id="password" type="password" name="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+              <div class="input-field col m6 s12">
+                <input id="password2" type="password" name="password2" class="validate">
+                <label for="password2">Confirm Password</label>
+              </div>
+            </div>
+            <div class="row center">
+              <button type="submit" class="btn waves-effect waves-light green z-depth-2">Change Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+<% include ../partials/footer %>
