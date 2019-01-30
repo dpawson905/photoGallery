@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
   <nav class="transparent z-depth-0">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Holly McInally</a>
+      <a href="#!" class="brand-logo ml-1">Holly McInally</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if(!isAuthenticated) { %>
@@ -17,9 +17,29 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <div class="nav-img" ></div>
+        </div>
+        <% if(!isAuthenticated) { %>
+          <a href="#"><img class="circle" src="/images/header1.jpg"></a>
+          <a href="#"><span class="white-text name">Photo Gallery</span></a>
+          <a href="#"><span class="white-text email">By Holly Mcinally</span></a>
+        <% } else { %> 
+          <a href="#"><img class="circle" src="<%= currentUser.image %>"></a>
+          <a href="#"><span class="white-text name"><%= currentUser.name %></span></a>
+          <a href="#"><span class="white-text email"><%= currentUser.email %></span></a>
+        <% } %>
+      </div>
+    </li>
+    <% if(!isAuthenticated) { %>
+      <% if (!user.length) { %>
+        <li><a href="/users/register">Register</a></li>
+      <% } %>
+      <li><a href="/users/login">Login</a></li>
+    <% } else { %>
+      <li><a href="/users/logout">Logout</a></li>
+    <% } %>
   </ul>
 </div>

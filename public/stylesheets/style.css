@@ -34,10 +34,27 @@ nav {
   transition: background-color 0.4s ease-out;
 }
 
+.nav-img {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url("/images/camera.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .navbar-fixed {
   position: absolute;
   top: 0;
   z-index: 999999999;
+}
+
+.vheight {
+  min-height: 50vh;
+}
+
+.ml-1 {
+  margin-left: 10px;
 }
 
 .module {
