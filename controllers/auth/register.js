@@ -44,12 +44,12 @@ module.exports = {
     */
     let userImage;
     let uploadImage = req.files.image;
-    let folderDir = '/uploads'
+    let folderDir = '/uploads';
     if (Object.keys(req.files).length == 0) {
       userImage = `https://robohash.org/${randomstring.generate(6)}?set=set3`;
     } else {
       userImage = `${folderDir}/${randomstring.generate(9)}_${req.files.image.name}`;
-      await uploadImage.mv(`./public/uploads/${userImage}`, async (err) => {
+      await uploadImage.mv(`./public/${userImage}`, async (err) => {
         if (err) {
           debug(err);
           return res.redirect('back');
