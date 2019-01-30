@@ -49,6 +49,10 @@ nav {
   z-index: 999999999;
 }
 
+.lg-on-sm {
+  font-size: 25px !important;
+}
+
 .vheight {
   min-height: 50vh;
 }

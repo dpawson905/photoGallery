@@ -35,11 +35,11 @@
     </li>
     <% if(!isAuthenticated) { %>
       <% if (!user.length) { %>
-        <li><a href="/users/register">Register</a></li>
+        <li><a class="lg-on-sm" href="/users/register">Register</a></li>
       <% } %>
-      <li><a href="/users/login">Login</a></li>
+      <li><a class="lg-on-sm" href="/users/login">Login</a></li>
     <% } else { %>
-      <li><a href="/users/logout">Logout</a></li>
+      <li><a class="lg-on-sm" href="/users/logout">Logout</a></li>
     <% } %>
   </ul>
 </div>
