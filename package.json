@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "set DEBUG=e-photo:* && nodemon"
+    "dev-win": "set DEBUG=qa-app:* && nodemon",
+    "dev": "DEBUG=e-photo:*  nodemon"
   },
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
@@ -14,6 +15,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "express-fileupload": "^1.1.1-alpha.1",
+    "express-photo-gallery": "^1.0.9",
     "express-session": "^1.15.6",
     "font-awesome": "^4.7.0",
     "http-errors": "~1.6.2",
@@ -23,7 +25,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
-    "randomstring": "^1.1.5"
+    "randomstring": "^1.1.5",
+    "sharp": "^0.21.3"
   },
   "devDependencies": {
     "dotenv": "^6.2.0"
